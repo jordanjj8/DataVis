@@ -11,7 +11,13 @@ while True:
     # Make a random walk instance, and plot the points
     rw = RandomWalk()
     rw.fill_walk()
-    plt.scatter(rw.x_values, rw.y_values, c=rw.x_values, cmap=plt.cm.Blues, s=15)
+
+    #pass the c argument a list containing the position of each point
+    # makes a list from 0 to rw.num_points
+    point_num = list(range(rw.num_points))
+    print(point_num)
+    #prints plot
+    plt.scatter(rw.x_values, rw.y_values, c=point_num, cmap=plt.cm.Blues, edgecolors='none', s=15)
     plt.show()
 
 # ask user if another walk to be plotted is desired
