@@ -14,10 +14,21 @@ while True:
 
     #pass the c argument a list containing the position of each point
     # makes a list from 0 to rw.num_points
+    # list of 0 to 5000
     point_num = list(range(rw.num_points))
-    print(point_num)
     #prints plot
+    # c = point_num colors the data based on a gradient from point_num
     plt.scatter(rw.x_values, rw.y_values, c=point_num, cmap=plt.cm.Blues, edgecolors='none', s=15)
+
+    #emphasize the first and last points of the walk
+    plt.scatter(0,0, c='green', edgecolors='none', s=100)
+    # indexes the mid point of the walk
+    mid = int(rw.num_points/2)
+    plt.scatter(rw.x_values[mid], rw.y_values[mid], c='blue', edgecolors='none', s=100)
+    plt.scatter(rw.x_values[-1], rw.y_values[-1], c= 'red', edgecolors='none', s=100)
+
+    # remove axes
+    plt.axes().get_xaxis()
     plt.show()
 
 # ask user if another walk to be plotted is desired
