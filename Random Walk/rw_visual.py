@@ -12,6 +12,11 @@ while True:
     rw = RandomWalk()
     rw.fill_walk()
 
+    # set the size of the plotting window
+    #specifies the plotting window in inches (assuming 80 pixels per inch)
+    plt.figure(figsize=(12,6))
+
+
     #pass the c argument a list containing the position of each point
     # makes a list from 0 to rw.num_points
     # list of 0 to 5000
