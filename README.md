@@ -1,1 +1,2 @@
-# DataVis
+# Data Visualization Projects 
+
