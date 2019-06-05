@@ -30,7 +30,7 @@ class RandomWalk():
             y_step = y_direction * y_distance
 
             #reject mpves that go nowhere
-            if x_step== 0 and y_step == 0:
+            if x_step == 0 and y_step == 0:
                 continue
 
             # calculate the next x & y values
@@ -38,5 +38,6 @@ class RandomWalk():
             next_x = self.x_values[-1] + x_step
             next_y = self.y_values[-1] + y_step
 
+            # adds the value to the list
             self.x_values.append(next_x)
             self.y_values.append(next_y)
